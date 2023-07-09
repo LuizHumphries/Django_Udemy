@@ -5,12 +5,6 @@ from django.shortcuts import render
 
 
 def home(request) -> HttpResponse:
-    return render(request, "recipes/home.html")
-
-
-def sobre(request) -> HttpResponse:
-    return HttpResponse("SOBRE")
-
-
-def contato(request) -> HttpResponse:
-    return HttpResponse("CONTATO")
+    return render(request, "recipes/home.html", context={
+        "name": "Luiz Otávio"
+    })
